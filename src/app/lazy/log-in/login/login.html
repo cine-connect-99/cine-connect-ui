@@ -1,0 +1,26 @@
+<div class="login-backdrop" (click)="close()"></div>
+<div class="login-modal">
+  <div class="login-header">
+    <div class="logo-title">
+      <div class="logo-icon">
+        <img src="assets/logo-white.svg" alt="Logo" />
+      </div>
+      <h2 class="site-title">CineConnect</h2>
+    </div>
+    <button class="close-btn" (click)="close()">&times;</button>
+  </div>
+  <form class="login-form" [formGroup]="form" (ngSubmit)="login()">
+    <label>
+      <span>Email</span>
+      <input type="email" formControlName="email" required />
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" formControlName="password" required />
+    </label>
+    <div class="login-actions">
+      <button type="submit" class="btn btn-primary">Log In</button>
+      <button type="button" class="btn btn-secondary" (click)="signup()">Sign Up</button>
+    </div>
+  </form>
+</div>

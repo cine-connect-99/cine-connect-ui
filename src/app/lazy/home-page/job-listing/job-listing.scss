@@ -1,0 +1,39 @@
+.job-listing {
+  padding: 0 16px;
+}
+
+.job-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 16px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.job-info {
+  flex: 2 2 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.job-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.job-desc {
+  color: #8daece;
+  font-size: 0.95rem;
+}
+
+.job-image {
+  flex: 1;
+  width: 100%;
+  aspect-ratio: 16/9;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+}

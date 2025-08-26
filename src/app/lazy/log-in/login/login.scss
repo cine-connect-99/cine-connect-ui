@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?display=swap&family=Be+Vietnam+Pro:wght@400;500;700;900&family=Noto+Sans:wght@400;500;700;900');
+
+.login-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 26, 36, 0.8);
+  z-index: 1000;
+}
+
+.login-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 360px;
+  background: rgba(23, 39, 54, 0.55); // semi-transparent
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  padding: 32px 28px 24px 28px;
+  font-family: "Be Vietnam Pro", "Noto Sans", sans-serif;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  backdrop-filter: blur(18px) saturate(180%); // glossy effect
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.18); // subtle border
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icon img {
+  width: 32px;
+  height: 32px;
+}
+
+.site-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #8daece;
+  font-size: 2rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.login-form h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 1rem;
+  color: #8daece;
+}
+
+.login-form input {
+  background: #20364b;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+}
+
+.login-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btn {
+  min-width: 84px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #359dff;
+  color: #0f1a24;
+}
+
+.btn-secondary {
+  background: #20364b;
+  color: #fff;
+}

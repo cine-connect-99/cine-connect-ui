@@ -1,0 +1,75 @@
+<div class="design-root">
+  <div class="layout-container">
+    <app-header (loginClicked)="showLogin = true"></app-header>
+    @if(showLogin) {
+      <app-login (closed)="showLogin = false"></app-login>
+    }
+    <div class="main-content">
+      <div class="layout-content-container">
+        <app-banner></app-banner>
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="featured-projects">
+          <div class="projects-list">
+            @for (project of projectCards; track project.title) {
+              <app-project-card
+                [imageUrl]="project.imageUrl"
+                [title]="project.title"
+                [desc]="project.desc">
+              </app-project-card>
+            }
+          </div>
+        </div>
+        <h2 class="section-title">Recent Job Opportunities</h2>
+        @for (job of jobListings; track job.title) {
+          <app-job-listing
+            [imageUrl]="job.imageUrl"
+            [title]="job.title"
+            [desc]="job.desc">
+          </app-job-listing>
+        }
+        <h2 class="section-title">Why Choose CineConnect?</h2>
+        <div class="why-choose">
+          <div class="why-choose-inner">
+            <h1 class="why-title">
+              Your Gateway to the Cinema World
+            </h1>
+            <p class="why-desc">
+              CineConnect is the leading platform for cinema professionals to find work, connect with peers, and advance their careers. Join our community today and take the
+              next step in your cinema journey.
+            </p>
+          </div>
+          <div class="why-features">
+            <div class="why-feature">
+              <div class="feature-icon">
+                <img src="assets/reel-icon.svg" alt="reel-icon" />
+              </div>
+              <div>
+                <h2 class="feature-title">Exclusive Opportunities</h2>
+                <p class="feature-desc">Access job openings not listed anywhere else, from major studios to indie projects.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="feature-icon">
+                <img src="assets/professionals-icon.svg" alt="professionals-icon" />
+              </div>
+              <div>
+                <h2 class="feature-title">Connect with Professionals</h2>
+                <p class="feature-desc">Build your network with industry peers, mentors, and potential collaborators.</p>
+              </div>
+            </div>
+            <div class="why-feature">
+              <div class="feature-icon">
+                <img src="assets/career-icon.svg" alt="career-icon" />
+              </div>
+              <div>
+                <h2 class="feature-title">Career Advancement</h2>
+                <p class="feature-desc">Find resources and tools to help you grow your career in the cinema industry.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>
