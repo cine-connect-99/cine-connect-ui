@@ -12,7 +12,7 @@
   top: 50%;
   left: 50%;
   width: 360px;
-  background: rgba(23, 39, 54, 0.55); // semi-transparent
+  background: rgba(23, 39, 54, 0.05); // semi-transparent
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
   transform: translate(-50%, -50%);
@@ -68,13 +68,6 @@
   gap: 18px;
 }
 
-.login-form h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0 0 8px 0;
-  text-align: center;
-}
-
 .login-form label {
   display: flex;
   flex-direction: column;
@@ -85,9 +78,9 @@
 
 .login-form input {
   background: #20364b;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 12px;
+  border: 1.5px solid #8daece;
+  border-radius: 5px;
+  padding: 15px;
   color: #fff;
   font-size: 1rem;
   outline: none;
@@ -95,8 +88,9 @@
 
 .login-actions {
   display: flex;
-  gap: 10px;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin-top: 8px;
 }
 
@@ -104,7 +98,7 @@
   min-width: 84px;
   height: 40px;
   padding: 0 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 0.95rem;
   font-weight: bold;
   cursor: pointer;
@@ -116,10 +110,18 @@
 
 .btn-primary {
   background: #359dff;
-  color: #0f1a24;
+  width: 100%;
+  color: #fff;
 }
 
 .btn-secondary {
   background: #20364b;
+  width: 100%;
   color: #fff;
+}
+
+.forgot {
+  margin-top: 20px;
+  display: flex;
+  align-self: flex-end;
 }

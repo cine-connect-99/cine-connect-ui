@@ -1,0 +1,19 @@
+<!-- Drawer -->
+@if(drawerOpen) {
+    <div class="profile-drawer-backdrop" (click)="closeDrawer.emit()"></div>
+}
+@if(drawerOpen) {
+    <div class="profile-drawer">
+        <button class="drawer-close" (click)="closeDrawer.emit()">&times;</button>
+        <div class="drawer-menu">
+            <div class="drawer-item" (click)="goToProfile()">
+                <img src="assets/profile-icon.svg" alt="Profile" />
+                <p>Profile</p>
+            </div>
+            <div class="drawer-item" (click)="logout()">
+                <img src="assets/logout-icon.svg" alt="Logout" />
+                <p>Logout</p>
+            </div>
+        </div>
+    </div>
+}

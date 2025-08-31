@@ -1,0 +1,24 @@
+<header class="layout-header">
+    <div class="header-left">
+        <div class="logo-title">
+            <div class="logo-icon">
+            <img src="assets/logo-white.svg" alt="Logo" />
+            </div>
+            <h2 class="site-title">CineConnect</h2>
+        </div>
+        <nav class="main-nav">
+            <a routerLink="/landing">Home</a>
+            <a routerLink="/jobs">Jobs</a>
+            <a routerLink="/people">People</a>
+        </nav>
+    </div>
+    <div class="header-right">
+        <button class="notification-btn">
+            <div class="notification-icon">
+            <img src="assets/notification-icon.svg" alt="Notifications" />
+            </div>
+        </button>
+        <div class="profile-avatar" (click)="drawerOpen = true"></div>
+        <app-side-drawer [drawerOpen]="drawerOpen" (closeDrawer)="drawerOpen = false"></app-side-drawer>
+    </div>
+</header>

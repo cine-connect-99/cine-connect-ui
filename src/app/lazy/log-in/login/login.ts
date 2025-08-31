@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,9 @@ export class LoginComponent {
 
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,
+    private router: Router
+  ) {
     this.form = this.fb.group({
       email: [''],
       password: ['']
@@ -28,7 +31,7 @@ export class LoginComponent {
   login() {
     if (this.form.valid) {
       const { email, password } = this.form.value;
-      // Handle login logic here
+      this.router.navigate(['landing']);
       this.close();
     }
   }

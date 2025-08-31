@@ -1,0 +1,77 @@
+@use '../../../../styles/theme' as theme;
+
+.layout-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid theme.$color-bg-card;
+  padding: 12px 40px;
+  background: transparent;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #fff;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.site-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  letter-spacing: -0.015em;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 36px;
+  text-decoration: none;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.notification-btn {
+  background: theme.$color-bg-card;
+  border: none;
+  border-radius: 12px;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notification-icon {
+  margin-top: 10px;
+  width: 32px;
+  height: 32px;
+}
+
+
+.profile-avatar {
+  background: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB7lQpzCAcZQfpJAg608tGm2bfKCsRwCcCcXdyVIR-RJ5UDy_GtkiCaIGyKL8sEQEcxSKAGj_wutyfkK8qnv7gumSg87OVyUmf1c2nq2Zy7cZTEH97FkFw8zVz8SZ9UtM1QNV1ArH85_O5lVeAod-0MrS5EqCkr4I8F1jl_9y6lFIyV6iArhXiUSO9u8uV_Y7C6llORLgMkQAFsepxpyHsCyxqRps8eeOD5-E3LhNx9_gqJsh5F2MtU5PdofnJanv89EN4zVGtPVxoy") center/cover no-repeat;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: 2px solid theme.$color-bg-card-hover;
+}

@@ -1,0 +1,68 @@
+@use '../../../../styles/theme' as theme;
+
+.profile-drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 20, 24, 0.7);
+  z-index: 1000;
+}
+
+.profile-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100vh;
+  background: theme.$color-bg-main;
+  box-shadow: -2px 0 16px #0008;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px 24px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  animation: slideInDrawer 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+@keyframes slideInDrawer {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+
+.drawer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.drawer-item {
+  width: 100%;
+  background: theme.$color-bg-card;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.drawer-item:hover {
+  background: theme.$color-bg-card-hover;
+}

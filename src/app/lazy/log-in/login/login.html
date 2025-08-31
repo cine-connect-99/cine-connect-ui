@@ -11,16 +11,18 @@
   </div>
   <form class="login-form" [formGroup]="form" (ngSubmit)="login()">
     <label>
-      <span>Email</span>
-      <input type="email" formControlName="email" required />
+      <input type="email" formControlName="email" placeholder="Email or Mobile Number" required />
     </label>
     <label>
-      <span>Password</span>
-      <input type="password" formControlName="password" required />
+      <input type="password" formControlName="password" placeholder="password" required />
     </label>
     <div class="login-actions">
-      <button type="submit" class="btn btn-primary">Log In</button>
+      <button type="submit" class="btn btn-primary" (click)="login()">Log In</button>
+      <p>OR</p>
       <button type="button" class="btn btn-secondary" (click)="signup()">Sign Up</button>
+    </div>
+    <div class="forgot">
+      <a href="#">forgot password</a>
     </div>
   </form>
 </div>
